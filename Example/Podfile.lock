@@ -1,0 +1,17 @@
+PODS:
+  - Internet (0.1.0):
+    - ReachabilitySwift
+  - ReachabilitySwift (1.1)
+
+DEPENDENCIES:
+  - Internet (from `../`)
+
+EXTERNAL SOURCES:
+  Internet:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Internet: 4e8f5816bcb1a796387d8a721b083889c1099504
+  ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
+
+COCOAPODS: 0.38.2
