@@ -5,7 +5,7 @@ public class InternetChange
 {
     private let block: (Reachability.NetworkStatus) -> Void
     
-    init(block: (Reachability.NetworkStatus) -> Void)
+    public init(block: (Reachability.NetworkStatus) -> Void)
     {
         self.block = block
     }
