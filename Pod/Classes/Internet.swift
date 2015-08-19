@@ -50,11 +50,17 @@ public class Internet
         }
         Internet.reachability.whenReachable = statusBlock
         Internet.reachability.whenUnreachable = statusBlock
+        Internet.reachability.startNotifier()
     }
     
     public static func start()
     {
         Internet.start(Reachability.reachabilityForInternetConnection())
+    }
+    
+    public static func pause()
+    {
+        Internet.reachability.stopNotifier()
     }
     
     public static func addChangeBlock(block: (Reachability.NetworkStatus) -> Void) -> InternetChange
