@@ -57,9 +57,11 @@ public class Internet
         Internet.start(Reachability.reachabilityForInternetConnection())
     }
     
-    public static func addChangeBlock(block: InternetChange)
+    public static func addChangeBlock(block: (Reachability.NetworkStatus) -> Void) -> InternetChange
     {
-        Internet.blocks.append(block)
+        let result = InternetChange(block: block)
+        Internet.blocks.append(result)
+        return result
     }
     
     public static func removeChangeBlock(block: InternetChange)
