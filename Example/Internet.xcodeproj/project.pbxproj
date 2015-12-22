@@ -13,8 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		7A683FE27129F2E0B9FEF51C /* Pods_Internet_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F6FE07C1042F257BCBA34D /* Pods_Internet_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C2155BD9ADB009D22C504BF8 /* Pods_Internet_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66E2C02886B5EEABACC065D /* Pods_Internet_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7A683FE27129F2E0B9FEF51C /* Pods_Internet_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F6FE07C1042F257BCBA34D /* Pods_Internet_Tests.framework */; };
+		C2155BD9ADB009D22C504BF8 /* Pods_Internet_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66E2C02886B5EEABACC065D /* Pods_Internet_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +209,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {

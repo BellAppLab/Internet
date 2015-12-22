@@ -34,12 +34,12 @@ public class Internet
     internal static var reachability: Reachability!
     private static var blocks: [InternetChange] = []
     
-    public static func start(hostName: String)
+    public static func start(hostName: String) throws
     {
-        Internet.start(Reachability(hostname: hostName))
+        try Internet.start(Reachability(hostname: hostName))
     }
     
-    public static func start(reachability: Reachability)
+    public static func start(reachability: Reachability) throws
     {
         Internet.reachability = reachability
         let statusBlock = { (reachability: Reachability) -> Void in
@@ -50,12 +50,12 @@ public class Internet
         }
         Internet.reachability.whenReachable = statusBlock
         Internet.reachability.whenUnreachable = statusBlock
-        Internet.reachability.startNotifier()
+        try Internet.reachability.startNotifier()
     }
     
-    public static func start()
+    public static func start() throws
     {
-        Internet.start(Reachability.reachabilityForInternetConnection())
+        try Internet.start(Reachability.reachabilityForInternetConnection())
     }
     
     public static func pause()
