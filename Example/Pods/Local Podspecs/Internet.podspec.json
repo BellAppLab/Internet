@@ -1,6 +1,6 @@
 {
   "name": "Internet",
-  "version": "0.2.2",
+  "version": "0.4.0",
   "summary": "A handy wrapper around ReachabilitySwift.",
   "homepage": "https://github.com/BellAppLab/Internet",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/BellAppLab/Internet.git",
-    "tag": "0.2.2"
+    "tag": "0.4.0"
   },
   "social_media_url": "https://twitter.com/BellAppLab",
   "platforms": {

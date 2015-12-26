@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Internet"
-  s.version          = "0.3.0"
+  s.version          = "0.4.0"
   s.summary          = "A handy wrapper around ReachabilitySwift."
 
   s.homepage         = "https://github.com/BellAppLab/Internet"

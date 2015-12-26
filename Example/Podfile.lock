@@ -1,5 +1,5 @@
 PODS:
-  - Internet (0.2.2):
+  - Internet (0.4.0):
     - ReachabilitySwift
   - ReachabilitySwift (2.3.3)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Internet: f7b6f7374552bdd7cfe576d5fd828e74fa3bcffd
+  Internet: 7df1869645bfe938d72189a2b7e22775924be0e4
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
 
 COCOAPODS: 0.39.0

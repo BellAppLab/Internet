@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '26DDD429743CEEECBE0F4F89'
+               BlueprintIdentifier = 'D06AEBD9330266D0541236F3'
                BlueprintName = 'Internet'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Internet.framework'>

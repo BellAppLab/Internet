@@ -1,38 +1,25 @@
 import ReachabilitySwift
 
 
-public class InternetChange
-{
-    private let block: (Reachability.NetworkStatus) -> Void
-    
-    public init(block: (Reachability.NetworkStatus) -> Void)
-    {
-        self.block = block
-    }
-    
-    public func run(status: Reachability.NetworkStatus)
-    {
-        self.block(status)
-    }
-}
-
-
-private func -=(inout lhs: [InternetChange], rhs: InternetChange)
-{
-    var result: [InternetChange] = []
-    for element in lhs {
-        if element !== rhs {
-            result.append(element)
-        }
-    }
-    lhs = result
-}
-
-
 public class Internet
 {
+    public class Change
+    {
+        private let block: (Reachability.NetworkStatus) -> Void
+        
+        public init(block: (Reachability.NetworkStatus) -> Void)
+        {
+            self.block = block
+        }
+        
+        public func run(status: Reachability.NetworkStatus)
+        {
+            self.block(status)
+        }
+    }
+    
     internal static var reachability: Reachability!
-    private static var blocks: [InternetChange] = []
+    private static var blocks: [Change] = []
     
     public static func start(hostName: String) throws
     {
@@ -63,14 +50,14 @@ public class Internet
         Internet.reachability.stopNotifier()
     }
     
-    public static func addChangeBlock(block: (Reachability.NetworkStatus) -> Void) -> InternetChange
+    public static func addChangeBlock(block: (Reachability.NetworkStatus) -> Void) -> Internet.Change
     {
-        let result = InternetChange(block: block)
+        let result = Internet.Change(block: block)
         Internet.blocks.append(result)
         return result
     }
     
-    public static func removeChangeBlock(block: InternetChange)
+    public static func removeChangeBlock(block: Internet.Change)
     {
         Internet.blocks -= block
     }
@@ -79,4 +66,15 @@ public class Internet
     {
         return Internet.reachability.currentReachabilityStatus != .NotReachable
     }
+}
+
+private func -=(inout lhs: [Internet.Change], rhs: Internet.Change)
+{
+    var result: [Internet.Change] = []
+    for element in lhs {
+        if element !== rhs {
+            result.append(element)
+        }
+    }
+    lhs = result
 }
